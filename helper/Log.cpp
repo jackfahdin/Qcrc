@@ -99,13 +99,13 @@ static inline void messageHandler(const QtMsgType type, const QMessageLogContext
             const char *ptr = strrchr(strFileTmp.c_str(), '/');
             if (nullptr != ptr) {
                 char fn[512] = {0};
-                sprintf(fn, "%s", ptr + 1);
+                sprintf_s(fn, sizeof(fn), "%s", ptr + 1);
                 strFileTmp = fn;
             }
             const char *ptrTmp = strrchr(strFileTmp.c_str(), '\\');
             if (nullptr != ptrTmp) {
                 char fn[512] = {0};
-                sprintf(fn, "%s", ptrTmp + 1);
+                sprintf_s(fn, sizeof(fn), "%s", ptrTmp + 1);
                 strFileTmp = fn;
             }
             fileAndLineLogStr = QString::fromStdString("[%1:%2]").arg(QString::fromStdString(strFileTmp), QString::number(context.line));
