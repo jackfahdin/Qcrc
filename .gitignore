@@ -72,4 +72,6 @@ CMakeLists.txt.user*
 *.exe
 
 build/
+helper/InfoVersion.h
+action-cli/
 

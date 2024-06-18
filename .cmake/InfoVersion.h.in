@@ -1,0 +1,14 @@
+#ifndef VERSION_H
+#define VERSION_H
+
+#include <QtGlobal>
+
+#define LATEST_TAG "${LATEST_TAG}"
+#define COMMIT_COUNTS "${COMMIT_COUNTS}"
+#define COMMIT_NEW_TAG_COUNTS "${COMMIT_NEW_TAG_COUNTS}"
+#define COMMIT_HASH "${DESCRIBE}"
+#define APPLICATION_VERSION "${LATEST_TAG}.${COMMIT_NEW_TAG_COUNTS}"
+
+#define APPNAME "${PROJECT_NAME}"
+
+#endif  // VERSION_H
